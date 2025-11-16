@@ -14,7 +14,7 @@ Vagrant.configure("2") do |config|
   # DHCP SERVER
   config.vm.define "dhcp01" do |dhcp|
     dhcp.vm.hostname = "dhcp01"
-    dhcp.vm.network "private_network", ip: "192.168.58.11", virtualbox__intnet: "dhcpnet"
+    dhcp.vm.network "private_network", ip: "192.168.58.20", virtualbox__intnet: "dhcpnet"
     dhcp.vm.provision "shell", path: "./conf/provision_dhcp.sh"
   end
 
