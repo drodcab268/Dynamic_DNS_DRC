@@ -1,8 +1,10 @@
 #!/bin/bash
 
+set -xeu
+
 # Installing BIND9
-apt update
-apt install bind9 dnsutils -y
+apt-get update
+apt-get install -y bind9 dnsutils
 
 # Generate TSIG key and save it in /vagrant (shared folder)
 tsig-keygen -a hmac-sha256 ddns-key > /vagrant/ddns.key
