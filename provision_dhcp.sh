@@ -2,7 +2,7 @@
 
 # Instala servicio DHCP..."
 apt update
-apt install isc-dhcp-server -y
+apt install dhcpd -y
 
 # Copia configuración dhcpd.conf
 cp /vagrant/dhcpd.conf /etc/dhcp/dhcpd.conf
