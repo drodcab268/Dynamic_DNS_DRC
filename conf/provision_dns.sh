@@ -27,20 +27,20 @@ EOF
 cat > /etc/bind/named.conf.local <<EOF
 zone "drodcab.es" IN {
     type master;
-    file "/etc/bind/db.drodcab.es";
+    file "/var/lib/bind/db.drodcab.es";
     allow-update { key "ddns-key"; };
 };
 
 zone "58.168.192.in-addr.arpa" IN {
     type master;
-    file "/etc/bind/db.192";
+    file "/var/lib/bind/db.192";
     allow-update { key "ddns-key"; };
 };
 EOF
 
 # Deploying zone files
-cp /vagrant/conf/zones/drodcab_es.txt /etc/bind/db.drodcab.es
-cp /vagrant/conf/zones/drodcab_rev.txt /etc/bind/db.192
+cp /vagrant/conf/zones/drodcab_es.txt /var/lib/bind/db.drodcab.es
+cp /vagrant/conf/zones/drodcab_rev.txt /var/lib/bind/db.192
 
 # Restarting BIND9
 systemctl restart bind9
