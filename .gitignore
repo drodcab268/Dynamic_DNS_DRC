@@ -1,2 +1,4 @@
 # Ignore vagrant dir
 .vagrant/
+# Ignore key files
+ddns.key
