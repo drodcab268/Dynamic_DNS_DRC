@@ -87,7 +87,7 @@ vagrant destroy -f
 | Machine       | Role                | Network            | Interface | IP / Method           |
 |---------------|---------------------|--------------------|-----------|------------------------|
 | **dns01**     | DNS Server (BIND9)  | 192.168.58.0/24    | eth1      | 192.168.58.10 (static) |
-| **dhcp01**    | DHCP Server (ISC)   | 192.168.58.0/24    | eth1      | 192.168.58.11 (static) |
+| **dhcp01**    | DHCP Server (ISC)   | 192.168.58.0/24    | eth1      | 192.168.58.20 (static) |
 | **client01**  | Client Machine      | 192.168.58.0/24    | eth1      | DHCP (dynamic)         |
 
 
